@@ -1,0 +1,35 @@
+:root {
+  --primary-color: white;
+  --secondary-color: black;
+  --zinc-100: #F0F0F0;
+  --zinc-500: #71717B;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DC;
+  --gray-400: #9EB7B8;
+  --lime-400: #9BCC50;
+  --lime-600: #729F3F;
+  --purple-400: #B97FC9;
+  --orange-500: #FD7D24;
+  --blue-300: #3DC7EF;
+  --blue-500: #4592C4;
+  --sky-400: #51C4E7;
+  --pink-200: #FDB9E9;
+  --pink-400: #F366B9;
+  --red-400: #FF6467;
+  --slate-400: #8FA1B9;
+  --slate-500: #7B62A3;
+  --yellow-500: #FFB900;
+  --yellow-600: #A38C21;
+  --amber-600: #D56723;
+
+  background-color: var(--red-400);
+
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
