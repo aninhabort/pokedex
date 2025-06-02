@@ -25,8 +25,10 @@ const PokemonCardInfos = ({
   height,
   weight,
   abilities,
+  category,
   setSelectedPokemon,
 }: PokemonCardInfoProps) => {
+
   return (
     <PokemonCardInfoComponent>
       <CloseWrapper>
@@ -79,7 +81,7 @@ const PokemonCardInfos = ({
         <InfoComponent>
           <div className="info-text-component">
             <PokemonInfoText>Category</PokemonInfoText>
-            <TypeText>Category</TypeText>
+            <TypeText>{category.replace('Pokémon','').trim()}</TypeText>
           </div>
 
           <div className="info-text-component">

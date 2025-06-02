@@ -12,9 +12,9 @@ import { PokemonCardProps } from "../interface";
 import { typesColors } from "../hooks/Colors";
 import { PokemonIdFormat } from "../hooks/idFormat";
 
-const PokemonCard = ({ name, id, types, image, height, weight, abilities, clickSelectedPokemon }: PokemonCardProps) => {
+const PokemonCard = ({ name, id, types, image, height, weight, abilities, category, clickSelectedPokemon }: PokemonCardProps) => {
   return (
-    <PokemonCardComponent onClick={() => clickSelectedPokemon({ name, id, types, image, height, weight, abilities })}
+    <PokemonCardComponent onClick={() => clickSelectedPokemon({ name, id, types, image, height, weight, abilities, category })}
     >
       <Img src={image} alt={name} />
       

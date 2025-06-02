@@ -16,12 +16,11 @@ const PokemonList = ({ allPokemons }: any) => {
     setSelectedPokemon(allPokemons);
   };
 
-  console.log(allPokemons);
-  
+  // console.log(allPokemons[1]);
 
   return (
     <BodyComponent>
-      <PokemonListComponent  isSelected={!!selectedPokemon} >
+      <PokemonListComponent isSelected={!!selectedPokemon} >
         {allPokemons.length > 0 ? (
           allPokemons.map((pokemon: PokemonProps, index: any) => (
             <div key={index}>
@@ -32,6 +31,7 @@ const PokemonList = ({ allPokemons }: any) => {
                 height={pokemon.height}
                 weight={pokemon.weight}
                 abilities={pokemon.abilities}
+                category={pokemon.category}
                 image={pokemon.sprites.other.dream_world.front_default}
                 clickSelectedPokemon={clickSelectedPokemon}
               />
@@ -52,7 +52,7 @@ const PokemonList = ({ allPokemons }: any) => {
             height={selectedPokemon.height}
             weight={selectedPokemon.weight}
             abilities={selectedPokemon.abilities}
-            clickSelectedPokemon={undefined}
+            category={selectedPokemon.category}
             setSelectedPokemon={() => setSelectedPokemon(null)}
           />
         </div>

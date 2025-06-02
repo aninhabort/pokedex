@@ -5,7 +5,7 @@ import PokemonList from "./components/PokemonList"
 import { useEffect, useState } from "react";
 import { PokemonProps } from './interface';
 
-const url = "https://pokeapi.co/api/v2/pokemon/";
+export const url = "https://pokeapi.co/api/v2/pokemon";
 
 function App() {
   const [pokemonUrlList, setPokemonUrl] = useState(
@@ -20,11 +20,22 @@ function App() {
 
     const pokemonData = await Promise.all(
       data.results.map(async (pokemon: any) => {
-        const resp = await fetch(`${url}${pokemon.name}`);
-        return resp.json();
+        const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
+        const pokemonDetails = await resp.json();
+
+        const speciesResp = await fetch(pokemonDetails.species.url);
+        const speciesData = await speciesResp.json();
+
+        const genus =
+          speciesData.genera.find((g: any) => g.language.name === "en")?.genus || "Unknown";
+
+        return {
+          ...pokemonDetails,
+          category: genus,
+        };
       })
     );
-
+  
     setALLPokemons(pokemonData);
   };
 

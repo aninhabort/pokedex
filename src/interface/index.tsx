@@ -1,29 +1,32 @@
-export interface TypesProps {
-  type: {
-    name: string;
-  };
+export interface TypeName {
+  name: string;
 }
 
-interface AbilitiesProps {
-  ability: {
-    name: string
-  }
+export interface TypesProps {
+  type: TypeName;
+}
+
+export interface AbilitiesProps {
+  ability: TypeName;
+}
+
+export interface SpritesProps {
+  other: {
+    dream_world: {
+      front_default: string;
+    };
+  };
 }
 
 export interface PokemonProps {
   id: number;
   name: string;
-  abilities: AbilitiesProps[],
+  abilities: AbilitiesProps[];
   height: number;
   weight: number;
   types: TypesProps[];
-  sprites: {
-    other: {
-      dream_world: {
-        front_default: string;
-      };
-    };
-  };
+  category: string;
+  sprites: SpritesProps;
 }
 
 export interface PokemonCardProps {
@@ -33,8 +36,9 @@ export interface PokemonCardProps {
   image: string;
   height: number;
   weight: number;
-  abilities: AbilitiesProps[],
-  clickSelectedPokemon: any
+  abilities: AbilitiesProps[];
+  category: string;
+  clickSelectedPokemon: (pokemon: PokemonCardProps) => void;
 }
 
 export interface PokemonCardInfoProps {
@@ -44,7 +48,7 @@ export interface PokemonCardInfoProps {
   image: string;
   height: number;
   weight: number;
-  abilities: AbilitiesProps[],
-  clickSelectedPokemon: any
-  setSelectedPokemon: any
+  abilities: AbilitiesProps[];
+  category: string;
+  setSelectedPokemon: () => void;
 }

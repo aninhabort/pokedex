@@ -5,7 +5,6 @@ export const PokemonCardComponent = styled.div`
   display: flex;
   flex-flow: column;
   padding: 20px 10px 20px 10px;
-  height: 251px;
   width: 200px;
   justify-content: center;
   align-items: center;
@@ -20,8 +19,8 @@ export const TypesComponent = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
 `;
 
 export const TextContent = styled.div`

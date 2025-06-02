@@ -9,7 +9,6 @@ export const PokemonCardInfoComponent = styled.div`
   align-items: center;
   gap: 10px;
   border-radius: 10px;
-  /* position: fixed; */
 `;
 
 export const CloseWrapper = styled.div`
