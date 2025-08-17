@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# 🐾 Pokédex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application that lets you explore Pokémon with their details such as types, abilities, stats, and categories.  
+It consumes the [PokéAPI](https://pokeapi.co/) to display updated and accurate Pokémon information.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [pokedex-aninha.netlify.app](https://pokedex-aninha.netlify.app/) *(add your deployed link here if available)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔍 Search for Pokémon by name or ID  
+- 📋 Display Pokémon details: types, abilities, stats, height, weight, and category  
+- 🖼️ Show official Pokémon artwork and sprites  
+- 📱 Responsive design for mobile and desktop  
+- 🎨 Simple and clean interface  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🚀 Technologies
+
+This project was built using:
+
+- **React** – For building the user interface  
+- **TypeScript** – For type safety and better developer experience  
+- **CSS** – For styling and layout  
+- **PokéAPI** – Open API that provides Pokémon data  
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/aninhabort/pokedex.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Navigate into the project folder:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+cd pokedex
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the project locally:
+
+```bash
+npm start
+```
+
+The app will be available at **[http://localhost:3000/](http://localhost:3000/)**.
+
+---
+
+## 📸 Preview
+
+![Preview](./screenshot.png)
+
+---
+
+## 📚 API Reference
+
+Data is fetched from the [PokéAPI](https://pokeapi.co/), which provides information such as:
+
+* Pokémon name and ID
+* Types and weaknesses
+* Abilities and stats
+* Height and weight
+* Official artwork and sprites
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+If you’d like to improve this project, feel free to **open an issue** or submit a **pull request**.
+
+Você tem o **link do Netlify** desse projeto também? Assim eu já adiciono no README.
 ```
